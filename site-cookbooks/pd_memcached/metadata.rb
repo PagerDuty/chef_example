@@ -1,0 +1,7 @@
+name "pd_memcached"
+description "PagerDuty's wrapper around community memcache cookbook"
+depends "memcached"
+depends "datadog"
+depends "sumologic"
+depends "monit"
+version "0.0.1"
