@@ -14,5 +14,14 @@ This repository mimics PagerDuty chef repo layout.
   ```ln -s lib/plugins .chef/plugins```
 - install necessary gems using ```bundle install```
 - install cookbook dependencies using berkshelf ```bundle exec berks install -p vendor```
-- unit tests can be run using ```bundle exec rake spec```
 
+
+#### Uasge
+- unit tests can be run using ```bundle exec rake spec```
+- take backup of chef server (and publish it in s3)
+  ```knife pd chef backup -K -C backup.json.gz```
+- restore a chef server
+  - Upload all cookbooks, roles, databags from git repo (will also delete all exsiting cookbooks, data bags roles from the server that are already maintained inside the git repo) 
+  ```./restore_chef.sh ```
+  - Recreate all nodes, clients, databags
+  ```knife pd chef restore -f backup.json.gz```
