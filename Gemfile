@@ -8,6 +8,7 @@ gem 'knife-server'
 gem 'fog'
 
 group :development do
+  gem 'rake'
   gem 'chefspec'
   gem 'foodcritic'
   gem 'fauxhai'
