@@ -2,6 +2,7 @@
 site :opscode
 cookbook 'memcached'
 cookbook 'datadog'
+cookbook 'monit'
 cookbook 'sumologic', github: 'PagerDuty/chef-sumologic'
 
 site_cookbooks_path = File.expand_path('../site-cookbooks', __FILE__)

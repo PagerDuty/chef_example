@@ -1,0 +1,36 @@
+{
+  "sources": {
+    "memcached": {
+      "locked_version": "1.1.2"
+    },
+    "datadog": {
+      "locked_version": "1.1.1"
+    },
+    "monit": {
+      "locked_version": "0.7.1"
+    },
+    "sumologic": {
+      "locked_version": "1.0.0",
+      "git": "git://github.com/PagerDuty/chef-sumologic.git",
+      "ref": "0a1764a7bddcfadf46fc5068bad3264b699f4d08"
+    },
+    "pd_memcached": {
+      "path": "./site-cookbooks/pd_memcached"
+    },
+    "runit": {
+      "locked_version": "0.14.2"
+    },
+    "apt": {
+      "locked_version": "1.5.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "yum": {
+      "locked_version": "2.3.2"
+    },
+    "sumologic-collector": {
+      "locked_version": "1.0.1"
+    }
+  }
+}
