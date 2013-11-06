@@ -16,7 +16,7 @@ This repository mimics PagerDuty chef repo layout.
 - install cookbook dependencies using berkshelf ```bundle exec berks install -p vendor```
 
 
-#### Uasge
+#### Usage
 - unit tests can be run using ```bundle exec rake spec```
 - take backup of chef server (and publish it in s3)
   ```knife pd chef backup -K -C backup.json.gz```
