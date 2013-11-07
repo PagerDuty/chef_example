@@ -14,6 +14,7 @@ This repository mimics PagerDuty chef repo layout.
   ```ln -s lib/plugins .chef/plugins```
 - install necessary gems using ```bundle install```
 - install cookbook dependencies using berkshelf ```bundle exec berks install -p vendor```
+- install and configure lxc if you want to run the functional spec
 
 
 #### Usage
@@ -34,6 +35,7 @@ This repository mimics PagerDuty chef repo layout.
 - write specs against attribute overrides via role or environments
 - gather shared asserts using ```shared_examples``` so that they can be reused in recipe, roles and environments testing
 - do not use memoized runner where fresh convergence is necessary (e.g. asserts against same attribute with diffent values)
+
 #### Functional Testing
 - All specs are tested on Fedora 19 with lxc 0.9.2 (lxc rpms are from rawhide), should work on any distro with working lxc 0.9.x
 - Functional tests will start chef zero, spawn container, bootstrap it and then run a convergence.
