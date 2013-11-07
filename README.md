@@ -25,3 +25,22 @@ This repository mimics PagerDuty chef repo layout.
   ```./restore_chef.sh ```
   - Recreate all nodes, clients, databags
   ```knife pd chef restore -f backup.json.gz```
+
+### Testing
+#### Unit testing
+- write specs against custom resources (this will help during rewrites)
+- write specs against resources that comes from community cookbooks, but we use for notifications
+- write specs against any regression (permission issues, service auto start issues)
+- write specs against attribute overrides via role or environments
+- gather shared asserts using ```shared_examples``` so that they can be reused in recipe, roles and environments testing
+- do not use memoized runner where fresh convergence is necessary (e.g. asserts against same attribute with diffent values)
+#### Functional Testing
+- All specs are tested on Fedora 19 with lxc 0.9.2 (lxc rpms are from rawhide), should work on any distro with working lxc 0.9.x
+- Functional tests will start chef zero, spawn container, bootstrap it and then run a convergence.
+- Use serverspec for basic assertions.
+- Use ```knife_commmand``` helper to assert using node attributes against chef-zero (successfull convergence will be reflected in chef server)
+- Use ```vm.ssh``` to test using commands (run inside the container)
+- Use ``Net::Telnet`` and other ruby libraries to test any network services from putside
+
+Let us know how it went. Happy cooking
+

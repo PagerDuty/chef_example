@@ -17,7 +17,7 @@ module PagerDuty
       cookbook_paths
     end
 
-    def pd_chef_repo
+    def chef_repo
       File.expand_path("../../",  __FILE__)
     end
 
