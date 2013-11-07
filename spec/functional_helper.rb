@@ -92,7 +92,7 @@ module PagerDuty
     end
 
     def chef_secret_file
-      ENV['BACKUP_FILE'] || File.join(repo_root, '.chef/secret-staging')
+      ENV['BACKUP_FILE'] || File.join(repo_root, '/tmp/.chef/secret')
     end
 
 
