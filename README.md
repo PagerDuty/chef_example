@@ -1,3 +1,7 @@
+### About This Repository
+
+The contents of this repository complement the [Chef at PagerDuty](https://www.pagerduty.com/blog/chef-at-pagerduty/) article on PagerDuty blog. The article was published in November 2013 and the repository represents our thinking and Chef workflow at the time; it has not been updated since, and does not necessarily reflect our current processes.
+
 ### PagerDuty Chef repository layout
 
 This repository mimics PagerDuty chef repo layout.
@@ -44,7 +48,7 @@ This repository mimics PagerDuty chef repo layout.
 - Use ```vm.ssh``` to test using commands (run inside the container)
 - Use ``Net::Telnet`` and other ruby libraries to test any network services from putside
 
-Let us know how it went. Happy cooking
+Let us know how it went. Happy cooking!
 
 #License and Copyright
 Copyright (c) 2014, PagerDuty
